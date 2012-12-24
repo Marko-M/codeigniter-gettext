@@ -1,4 +1,4 @@
 Codeigniter gettext
 ===================
 
-Codeigniter PHP MVC framework library for dealing with gettext
+Codeigniter PHP framework library for dealing with gettext
