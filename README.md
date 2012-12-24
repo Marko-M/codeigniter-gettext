@@ -15,7 +15,7 @@ Please note that following steps assume that you have correctly installed gettex
 5. Add `'gettext'` to Auto-load Config files array or use `$this->config->load('gettext')` inside your controllers.
 6. Add `'gettext'` to Auto-load Libraries array or use `$this->load->library('gettext')` inside your controllers.
 
-If you are loading this library inside your Codeigniter controller you can override any of the default configuration directives. For example if you want to override default `$config['gettext_locale']` with hr_HR.UTF-8 you could use something like this:
+If you are loading this library inside your controller you can override any of the default configuration directives. For example if you want to override default `$config['gettext_locale']` with hr_HR.UTF-8 you could use something like this:
 
  ```php
 $this->load->library(
