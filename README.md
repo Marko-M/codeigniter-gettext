@@ -1,4 +1,4 @@
-codeigniter-gettext
+Codeigniter gettext
 ===================
 
-Codeigniter framework library for dealing with gettext
+Codeigniter PHP MVC framework library for dealing with gettext
