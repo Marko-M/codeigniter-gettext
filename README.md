@@ -18,10 +18,18 @@ Please note that following steps assume that you have correctly installed gettex
 If you are loading this library inside your controller you can override any of the default configuration directives. For example if you want to override default `$config['gettext_locale']` with hr_HR.UTF-8 you could use something like this:
 
  ```php
-$this->load->library(
-    'gettext',
-    array(
-        'gettext_locale' => 'hr_HR.UTF-8'
-    )
-);
+ <?php
+class Example extends CI_Controller {
+   public function __construct() {
+        parent::__construct();
+
+        $this->load->library(
+            'gettext',
+            array(
+                'gettext_locale' => 'hr_HR.UTF-8'
+            )
+        );
+   }
+}
+?>
  ```
