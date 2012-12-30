@@ -10,10 +10,10 @@ class Gettext {
      * @param array $override Override default configuration
      */
     public function __construct($override) {
-        $CI =& get_instance();
+        $CI = &get_instance();
 
         // Merge $config and $override
-        $config = array_merge(
+        $config = array_merge (
             array(
                 'gettext_locale_dir' => $CI->config->item('gettext_locale_dir'),
                 'gettext_text_domain' => $CI->config->item('gettext_text_domain'),
@@ -24,26 +24,46 @@ class Gettext {
         );
 
         // Gettext catalog codeset
-        bind_textdomain_codeset(
+        bind_textdomain_codeset (
             $config['gettext_text_domain'],
             $config['gettext_catalog_codeset']
         );
 
+        log_message (
+            'debug',
+            'Gettext catalog_codeset: '.$config['gettext_catalog_codeset']
+        );
+
         // Path to gettext locales directory relative to FCPATH.APPPATH
-        bindtextdomain(
+        bindtextdomain (
             $config['gettext_text_domain'],
             FCPATH.APPPATH.$config['gettext_locale_dir']
         );
 
+        log_message (
+            'debug',
+            'Gettext locale_dir: '.$config['gettext_locale_dir']
+        );
+
         // Gettext domain
-        textdomain(
-                $config['gettext_text_domain']
+        textdomain (
+            $config['gettext_text_domain']
+        );
+
+        log_message (
+            'debug',
+            'Gettext text_domain: '.$config['gettext_text_domain']
         );
 
         // Gettext locale
-        setlocale(
+        setlocale (
             LC_ALL,
             $config['gettext_locale']
+        );
+
+        log_message (
+            'debug',
+            'Gettext locale: '.$config['gettext_locale']
         );
     }
 }
