@@ -15,10 +15,10 @@ class Gettext {
      *
      * @param array $override Override default configuration
      */
-    public function __construct($override = array()) {
+    public function __construct($config = array()) {
         $CI = &get_instance();
 
-        // Merge $config and $override
+        // Merge $config and $config
         $config = array_merge (
             array(
                 'gettext_locale_dir' => $CI->config->item('gettext_locale_dir'),
@@ -26,7 +26,7 @@ class Gettext {
                 'gettext_catalog_codeset' => $CI->config->item('gettext_catalog_codeset'),
                 'gettext_locale' => $CI->config->item('gettext_locale')
             ),
-            $override
+            $config
         );
 
         // Gettext catalog codeset
