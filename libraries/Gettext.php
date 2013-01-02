@@ -3,7 +3,7 @@
 /**
  * Codeigniter PHP framework library class for dealing with gettext.
  *
- * @package    CodeIgniter
+ * @package     CodeIgniter
  * @subpackage	Libraries
  * @category	Language
  * @author	Marko Martinović <marko@techytalk.info>
