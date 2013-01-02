@@ -2,6 +2,12 @@
 
 /**
  * Codeigniter PHP framework library class for dealing with gettext.
+ *
+ * @package    CodeIgniter
+ * @subpackage	Libraries
+ * @category	Language
+ * @author	Marko Martinović <marko@techytalk.info>
+ * @link	https://github.com/Marko-M/codeigniter-gettext
  */
 class Gettext {
     /**
@@ -9,7 +15,7 @@ class Gettext {
      *
      * @param array $override Override default configuration
      */
-    public function __construct($override) {
+    public function __construct($override = array()) {
         $CI = &get_instance();
 
         // Merge $config and $override
