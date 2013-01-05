@@ -13,7 +13,7 @@ class Gettext {
     /**
      * Initialize gettext inside Codeigniter PHP framework.
      *
-     * @param array $override Override default configuration
+     * @param array $config Override default configuration
      */
     public function __construct($config = array()) {
         $CI = &get_instance();
