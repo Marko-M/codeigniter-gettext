@@ -4,7 +4,7 @@
  * Codeigniter PHP framework library class for dealing with gettext.
  *
  * @package     CodeIgniter
- * @subpackage	Libraries
+ * @subpackage    Libraries
  * @category	Language
  * @author	Marko Martinović <marko@techytalk.info>
  * @link	https://github.com/Marko-M/codeigniter-gettext
@@ -13,12 +13,12 @@ class Gettext {
     /**
      * Initialize gettext inside Codeigniter PHP framework.
      *
-     * @param array $config Override the default configuration
+     * @param array $override Override default configuration
      */
     public function __construct($config = array()) {
         $CI = &get_instance();
 
-        // Merge $config and $config
+        // Merge $config and config/gettext.php $config
         $config = array_merge (
             array(
                 'gettext_locale_dir' => $CI->config->item('gettext_locale_dir'),
