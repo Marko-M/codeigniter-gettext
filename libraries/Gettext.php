@@ -71,6 +71,14 @@ class Gettext {
             'debug',
             'Gettext locale: '.$config['gettext_locale']
         );
+        
+        // Change environment language for CLI
+        putenv('LANGUAGE=' . $config['gettext_locale']);
+        
+        log_message (
+            'debug',
+            'Environment language: ' . $config['gettext_locale']
+        );
     }
 }
 
