@@ -10,7 +10,7 @@ $config['gettext_text_domain'] = 'default';
 $config['gettext_locale_dir'] = 'language/locale';
 
 // Gettext locale
-$config['gettext_locale'] = 'C.UTF-8';
+$config['gettext_locale'] = Array( "en_GB.UTF-8", "en_GB@euro", "en_GB", "english", "eng", "en");
 
 /* End of file gettext.php */
 /* Location: ./application/config/gettext.php */
