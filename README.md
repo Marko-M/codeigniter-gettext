@@ -85,10 +85,10 @@ $hook['post_controller_constructor'] = function()
             'gettext_locale_dir' => './language/locale/';
             'gettext_locale' => $locale[$lang]
         );
-        $this->load->library('gettext', $getTextConfig);
+        $CI->load->library('gettext', $getTextConfig);
     }
     else {
-        $this->load->library('gettext');
+        $CI->load->library('gettext');
     }
 
 };
