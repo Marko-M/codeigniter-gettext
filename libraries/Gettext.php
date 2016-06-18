@@ -44,12 +44,12 @@ class Gettext {
         // Path to gettext locales directory relative to FCPATH.APPPATH
         $IsBindTextDomain = bindtextdomain (
             $config['gettext_text_domain'],
-            FCPATH.APPPATH.$config['gettext_locale_dir']
+            APPPATH.$config['gettext_locale_dir']
         );
 
         log_message (
             'debug',
-            'Try to bind gettext text domain (locale dir): '. FCPATH.APPPATH.$config['gettext_locale_dir'] . " - " .
+            'Try to bind gettext text domain (locale dir): ' . $IsBindTextDomain . " - " .
                 (isset($IsBindTextDomain) ? 'Successful' : '*** FAILED ***')
         );
 
