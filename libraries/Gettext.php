@@ -49,7 +49,7 @@ class Gettext {
 
         log_message (
             'debug',
-            'Try to bind gettext text domain (locale dir): ' . (isset($IsBindTextDomain) ? $IsBindTextDomain : APPPATH.$config['gettext_locale_dir'] ) . " - " .
+            'Try to bind gettext text domain (locale dir): ' . (empty($IsBindTextDomain) ? $IsBindTextDomain : APPPATH.$config['gettext_locale_dir'] ) . " - " .
                 (isset($IsBindTextDomain) ? 'Successful' : '*** FAILED ***')
         );
 
