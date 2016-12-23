@@ -17,7 +17,6 @@ class Gettext {
      */
     public function __construct($config = array()) {
         $CI = &get_instance();
-
         // Merge $config and config/gettext.php $config
         $config = array_merge (
             array(

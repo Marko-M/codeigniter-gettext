@@ -1,19 +1,23 @@
 {
     "name": "joel-depiltech/codeigniter-gettext",
     "description": "A Codeigniter PHP framework library for dealing with gettext.",
+    "version": "0.0.2",
+    "time": "2016-12-23",
     "type": "library",
-    "require": {
-        "php": ">=5.2"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^5.7"
-    },
     "license": "GPL-2.0",
+    "keywords": ["codeigniter", "gettext", "i18n"],
     "authors": [
         {
             "name": "Joël Gaujard",
             "email": "joel@depiltech.com"
         }
     ],
-    "minimum-stability": "stable"
+    "homepage": "https://github.com/joel-depiltech/codeigniter-gettext",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
 }
