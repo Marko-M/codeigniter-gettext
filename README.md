@@ -2,37 +2,37 @@ Codeigniter gettext
 ===================
 
 This is Codeigniter PHP framework library for dealing with gettext.
+This library is a fork from Marko Martivović : https://github.com/Marko-M/codeigniter-gettext
 
 Instructions
 ------------
 
 Please note that following steps assume that you have correctly installed gettext and configured Codeigniter on your server.
 
-1. Place gettext.php inside application/config.
-2. Place Gettext.php inside application/libraries.
-3. Adjust application/config/gettext.php with your `$config['gettext_catalog_codeset']`, `$config['gettext_text_domain']`, `$config['gettext_locale_dir']` and `$config['gettext_locale']`.
-4. Create gettext locales directory according to your `$config['gettext_locale_dir']` (application/language/locale by default). Inside that directory create locale_name/LC_MESSAGES path for each of your locales and place your .mo files inside.
-5. Add `'gettext'` to Auto-load Config files array or use `$this->config->load('gettext')` inside your controller.
-6. Add `'gettext'` to Auto-load Libraries array or use `$this->load->library('gettext')` inside your controller.
+1. Use composer to install this package `composer require joel-depiltech/codeigniter-gettext`
+2. Add this package to Auto-load Packages files array : `$autoload['packages'] = array(FCPATH . 'vendor/joel-depiltech/codeigniter-gettext');`
+3. Adjust configuration when loading the library `$this->load->library('gettext', array('gettext_locale' => 'fr_FR', 'gettext_locale_dir' => 'language/locale'));`
+4. Create gettext locales directory according to your `gettext_locale_dir` (application/language/locale by default). Inside that directory create locale_name/LC_MESSAGES path for each of your locales and place your .mo files inside.
 
-If you are loading this library inside your controller you can override any of the default configuration directives. For example if you want to override default `$config['gettext_locale']` with hr_HR.UTF-8 you could use something like this:
+This is an example how to load Library overwriting default configuration:
 
- ```php
- <?php
-class Example extends CI_Controller {
+```php
+<?php
+class My_controller extends CI_Controller {
    public function __construct() {
         parent::__construct();
 
         $this->load->library(
             'gettext',
             array(
-                'gettext_locale' => 'hr_HR.UTF-8'
+                'gettext_locale' => 'hr_HR.UTF-8',
+                'gettext_locale_dir' => 'language/locale'
             )
         );
    }
 }
 ?>
- ```
+```
 
 Additional Usage
 -----------------------
