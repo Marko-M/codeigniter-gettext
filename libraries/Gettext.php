@@ -22,7 +22,7 @@ class Gettext
         $CI = &get_instance();
 
         // Merge $config and config/gettext.php $config
-        $config = array_merge (
+        $config = array_merge(
             array(
                 'gettext_locale_dir' => $CI->config->item('gettext_locale_dir'),
                 'gettext_text_domain' => $CI->config->item('gettext_text_domain'),
@@ -33,59 +33,59 @@ class Gettext
         );
 
         // Gettext catalog codeset
-        $IsBindTextDomainCodeset = bind_textdomain_codeset (
+        $IsBindTextDomainCodeset = bind_textdomain_codeset(
             $config['gettext_text_domain'],
             $config['gettext_catalog_codeset']
         );
 
-        log_message (
+        log_message(
             'info',
             'Try to bind gettext catalog_codeset: ' . $config['gettext_catalog_codeset'] . " - " .
                 ($IsBindTextDomainCodeset ? 'Successful' : '*** FAILED ***')
         );
 
         // Path to gettext locales directory relative to FCPATH.APPPATH
-        $IsBindTextDomain = bindtextdomain (
+        $IsBindTextDomain = bindtextdomain(
             $config['gettext_text_domain'],
             APPPATH . $config['gettext_locale_dir']
         );
 
-        log_message (
+        log_message(
             'info',
-            'Try to bind gettext text domain (locale dir): ' . (empty($IsBindTextDomain) ? $IsBindTextDomain : APPPATH.$config['gettext_locale_dir'] ) . " - " .
+            'Try to bind gettext text domain (locale dir): ' . (empty($IsBindTextDomain) ? $IsBindTextDomain : APPPATH . $config['gettext_locale_dir']) . " - " .
                 (isset($IsBindTextDomain) ? 'Successful' : '*** FAILED ***')
         );
 
         // Gettext domain
-        $IsSetTextDomain = textdomain (
+        $IsSetTextDomain = textdomain(
             $config['gettext_text_domain']
         );
 
-        log_message (
+        log_message(
             'info',
-            'Try to set gettext text_domain: '.$config['gettext_text_domain'] . " - " .
+            'Try to set gettext text_domain: ' . $config['gettext_text_domain'] . " - " .
                 ($IsSetTextDomain ? 'Successful' : '*** FAILED ***')
         );
 
         // Gettext locale
-        $IsSetLocale = setlocale (
+        $IsSetLocale = setlocale(
             LC_ALL,
             $config['gettext_locale']
         );
 
-        log_message (
+        log_message(
             'info',
-            'Try to set gettext locale: '.(is_array($config['gettext_locale']) ? print_r($config['gettext_locale'],TRUE) : $config['gettext_locale']) . " - " .
+            'Try to set gettext locale: ' . (is_array($config['gettext_locale']) ? print_r($config['gettext_locale'], TRUE) : $config['gettext_locale']) . " - " .
                 ($IsSetLocale ? 'Successful' : '*** FAILED ***')
         );
         
         // Change environment language for CLI
         $IsPutEnv = putenv('LANGUAGE=' . (is_array($config['gettext_locale']) ? $config['gettext_locale'][0] : $config['gettext_locale']));
         
-        log_message (
+        log_message(
             'info',
             'Try to set Environment LANGUAGE: ' . (is_array($config['gettext_locale']) ? $config['gettext_locale'][0] : $config['gettext_locale']) . " - " .
-                ( $IsPutEnv ? 'Successful' : '*** FAILED ***')
+                ($IsPutEnv ? 'Successful' : '*** FAILED ***')
         );
     }
 }
