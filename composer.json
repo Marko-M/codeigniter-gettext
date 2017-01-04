@@ -1,7 +1,6 @@
 {
     "name": "joel-depiltech/codeigniter-gettext",
-    "description": "A Codeigniter PHP framework library for dealing with gettext.",
-    "version": "0.0.2",
+    "description": "A Codeigniter PHP framework package for dealing with gettext as a Composer requirement.",
     "time": "2016-12-23",
     "type": "library",
     "license": "GPL-2.0",
