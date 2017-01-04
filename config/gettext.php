@@ -7,7 +7,7 @@ $config['gettext_catalog_codeset'] = 'UTF-8';
 $config['gettext_text_domain'] = 'default';
 
 // Path to gettext locale directory relative to FCPATH.APPPATH
-$config['gettext_locale_dir'] = 'language/locale';
+$config['gettext_locale_dir'] = 'language/locales';
 
 // Gettext locale
 $config['gettext_locale'] = Array( "en_GB.UTF-8", "en_GB@euro", "en_GB", "english", "eng", "en");
