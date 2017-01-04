@@ -4,19 +4,23 @@
  * Codeigniter PHP framework library class for dealing with gettext.
  *
  * @package     CodeIgniter
- * @subpackage    Libraries
+ * @subpackage  Libraries
  * @category	Language
- * @author	Marko Martinović <marko@techytalk.info>
- * @link	https://github.com/Marko-M/codeigniter-gettext
+ * @author      Joël Gaujard <joel@depiltech.com>
+ * @author      Marko Martinović <marko@techytalk.info>
+ * @link        https://github.com/joel-depiltech/codeigniter-gettext
  */
-class Gettext {
+class Gettext
+{
     /**
      * Initialize gettext inside Codeigniter PHP framework.
      *
      * @param array $config Override default configuration
      */
-    public function __construct($config = array()) {
+    public function __construct($config = array())
+    {
         $CI = &get_instance();
+
         // Merge $config and config/gettext.php $config
         $config = array_merge (
             array(
@@ -35,19 +39,19 @@ class Gettext {
         );
 
         log_message (
-            'debug',
-            'Try to bind gettext catalog_codeset: '.$config['gettext_catalog_codeset'] . " - " .
+            'info',
+            'Try to bind gettext catalog_codeset: ' . $config['gettext_catalog_codeset'] . " - " .
                 ($IsBindTextDomainCodeset ? 'Successful' : '*** FAILED ***')
         );
 
         // Path to gettext locales directory relative to FCPATH.APPPATH
         $IsBindTextDomain = bindtextdomain (
             $config['gettext_text_domain'],
-            APPPATH.$config['gettext_locale_dir']
+            APPPATH . $config['gettext_locale_dir']
         );
 
         log_message (
-            'debug',
+            'info',
             'Try to bind gettext text domain (locale dir): ' . (empty($IsBindTextDomain) ? $IsBindTextDomain : APPPATH.$config['gettext_locale_dir'] ) . " - " .
                 (isset($IsBindTextDomain) ? 'Successful' : '*** FAILED ***')
         );
@@ -58,7 +62,7 @@ class Gettext {
         );
 
         log_message (
-            'debug',
+            'info',
             'Try to set gettext text_domain: '.$config['gettext_text_domain'] . " - " .
                 ($IsSetTextDomain ? 'Successful' : '*** FAILED ***')
         );
@@ -70,8 +74,8 @@ class Gettext {
         );
 
         log_message (
-            'debug',
-            'Try to set gettext locale: '.(is_array($config['gettext_locale']) ? print_r($config['gettext_locale'],TRUE) : $config['gettext_locale']) .
+            'info',
+            'Try to set gettext locale: '.(is_array($config['gettext_locale']) ? print_r($config['gettext_locale'],TRUE) : $config['gettext_locale']) . " - " .
                 ($IsSetLocale ? 'Successful' : '*** FAILED ***')
         );
         
@@ -79,7 +83,7 @@ class Gettext {
         $IsPutEnv = putenv('LANGUAGE=' . (is_array($config['gettext_locale']) ? $config['gettext_locale'][0] : $config['gettext_locale']));
         
         log_message (
-            'debug',
+            'info',
             'Try to set Environment LANGUAGE: ' . (is_array($config['gettext_locale']) ? $config['gettext_locale'][0] : $config['gettext_locale']) . " - " .
                 ( $IsPutEnv ? 'Successful' : '*** FAILED ***')
         );
