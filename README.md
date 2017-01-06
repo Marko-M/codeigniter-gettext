@@ -2,6 +2,9 @@ CodeIgniter Gettext
 ===================
 
 [![Latest Stable Version](https://poser.pugx.org/joel-depiltech/codeigniter-gettext/v/stable.svg)](https://packagist.org/packages/joel-depiltech/codeigniter-gettext)
+[![Build Status](https://scrutinizer-ci.com/g/joel-depiltech/codeigniter-gettext/badges/build.png?b=master)](https://scrutinizer-ci.com/g/joel-depiltech/codeigniter-gettext/build-status/master)
+[![Code Coverage](https://scrutinizer-ci.com/g/joel-depiltech/codeigniter-gettext/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/joel-depiltech/codeigniter-gettext/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/joel-depiltech/codeigniter-gettext/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/joel-depiltech/codeigniter-gettext/?branch=master)
 [![License](https://poser.pugx.org/joel-depiltech/codeigniter-gettext/license)](https://packagist.org/packages/joel-depiltech/codeigniter-gettext)
 
 This is [CodeIgniter](https://codeigniter.com) PHP framework library for dealing with [Gettext](https://www.gnu.org/software/gettext/).
