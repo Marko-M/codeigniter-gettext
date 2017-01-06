@@ -95,8 +95,7 @@ class Gettext
             (is_string($IsSetLocale) ? 'info' : 'error'),
             'Gettext Library -> Try to set locale: ' .
             (is_array($config['gettext_locale']) ?
-                print_r($config['gettext_locale'], TRUE) :
-                $config['gettext_locale']
+                print_r($config['gettext_locale'], TRUE) : $config['gettext_locale']
             )
         );
 
@@ -107,8 +106,7 @@ class Gettext
             ($IsPutEnv === TRUE ? 'info' : 'error'),
             'Gettext Library -> Try to set environment language: ' .
             (is_array($config['gettext_locale']) ?
-                $config['gettext_locale'][0] :
-                $config['gettext_locale']
+                $config['gettext_locale'][0] : $config['gettext_locale']
             )
         );
 
