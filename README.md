@@ -17,12 +17,12 @@ Please note that following steps assume that you have correctly installed gettex
 
 1. Use composer to install this package `composer require joel-depiltech/codeigniter-gettext`
 2. Add this package to Auto-load Packages files array :
-`$autoload['packages'] = array(FCPATH . 'vendor/joel-depiltech/codeigniter-gettext');`
+`$autoload['packages'] = array(FCPATH . 'vendor/joel-depiltech/codeigniter-gettext/src');`
 or include it with Loader library
-`$this->load->add_package_path(FCPATH . 'vendor/joel-depiltech/codeigniter-gettext');`
+`$this->load->add_package_path(FCPATH . 'vendor/joel-depiltech/codeigniter-gettext/src');`
 3. Adjust configuration when loading the library
 `$this->load->library('gettext', array('gettext_locale' => 'fr_FR', 'gettext_locale_dir' => 'language/locale'));`
-or just copy the file `application/vendor/joel-depiltech/codeigniter-gettext/config/gettext.php` in your folder `application/config/gettext.php`
+or just copy the file `application/vendor/joel-depiltech/codeigniter-gettext/src/config/gettext.php` in your folder `application/config/gettext.php`
 4. Create gettext locales directory according to your `gettext_locale_dir` (application/language/locales by default). Inside that directory create locale_name/LC_MESSAGES path for each of your locales and place your .mo files inside.
 
 This is an example how to load Library overwriting default configuration:
