@@ -1,4 +1,7 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+// @codeCoverageIgnoreStart
+if (!defined('PHPUNIT_TESTING')) defined('BASEPATH') OR exit('No direct script access allowed');
+// @codeCoverageIgnoreEnd
 
 /**
  * Codeigniter PHP framework library class for dealing with gettext.
@@ -13,8 +16,9 @@
 class Gettext
 {
     /**
-     * Initialize gettext inside Codeigniter PHP framework.
+     * Initialize Codeigniter PHP framework and get configuration
      *
+     * @codeCoverageIgnore
      * @param array $config Override default configuration
      */
     public function __construct($config = array())
@@ -32,6 +36,16 @@ class Gettext
             $config
         );
 
+        self::init($config);
+    }
+
+    /**
+     * Initialize gettext inside Codeigniter PHP framework.
+     *
+     * @param array $config configuration
+     */
+    static public function init(array $config)
+    {
         // Gettext catalog codeset
         $IsBindTextDomainCodeset = bind_textdomain_codeset(
             $config['gettext_text_domain'],
