@@ -1,7 +1,9 @@
 <?php
-if ( ! defined('PHPUNIT_TESTING')) {
+// @codeCoverageIgnoreStart
+if (!defined('PHPUNIT_TESTING')) {
     defined('BASEPATH') || exit('No direct script access allowed');
 }
+// @codeCoverageIgnoreEnd
 
 // Gettext catalog codeset
 $config['gettext_catalog_codeset'] = 'UTF-8';

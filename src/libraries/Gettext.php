@@ -58,7 +58,7 @@ class Gettext
 
         log_message(
             (is_string($IsBindTextDomainCodeset) ? 'info' : 'error'),
-            'Gettext Library -> Try to bind textdomain_codeset: ' .
+            'Gettext Library -> Try to bind text domain code set: ' .
             $config['gettext_catalog_codeset']
         );
 
@@ -70,7 +70,7 @@ class Gettext
 
         log_message(
             (is_string($IsBindTextDomain) ? 'info' : 'error'),
-            'Gettext Library -> Try to bind text domain: ' .
+            'Gettext Library -> Try to bind text domain directory: ' .
             APPPATH . $config['gettext_locale_dir']
         );
 
@@ -81,7 +81,7 @@ class Gettext
 
         log_message(
             (is_string($IsSetTextDomain) ? 'info' : 'error'),
-            'Gettext Library -> Try to set text_domain: ' .
+            'Gettext Library -> Try to set text domain: ' .
             $config['gettext_text_domain']
         );
 
@@ -93,7 +93,7 @@ class Gettext
 
         log_message(
             (is_string($IsSetLocale) ? 'info' : 'error'),
-            'Gettext Library -> Try to set gettext locale: ' .
+            'Gettext Library -> Try to set locale: ' .
             (is_array($config['gettext_locale']) ?
                 print_r($config['gettext_locale'], TRUE) :
                 $config['gettext_locale']
@@ -105,7 +105,7 @@ class Gettext
 
         log_message(
             ($IsPutEnv === TRUE ? 'info' : 'error'),
-            'Gettext Library -> Try to set Environment LANGUAGE: ' .
+            'Gettext Library -> Try to set environment language: ' .
             (is_array($config['gettext_locale']) ?
                 $config['gettext_locale'][0] :
                 $config['gettext_locale']
@@ -129,3 +129,4 @@ class Gettext
 }
 
 /* End of file Gettext.php */
+/* Location: ./libraries/config/gettext.php */
