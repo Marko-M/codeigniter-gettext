@@ -1,14 +1,14 @@
-Codeigniter gettext
+CodeIgniter Gettext
 ===================
 
 [![Latest Stable Version](https://poser.pugx.org/joel-depiltech/codeigniter-gettext/v/stable.svg)](https://packagist.org/packages/joel-depiltech/codeigniter-gettext)
 [![License](https://poser.pugx.org/joel-depiltech/codeigniter-gettext/license)](https://packagist.org/packages/joel-depiltech/codeigniter-gettext)
 
-This is Codeigniter PHP framework library for dealing with gettext.
+This is [CodeIgniter](https://codeigniter.com) PHP framework library for dealing with [Gettext](https://www.gnu.org/software/gettext/).
 
 This library is a fork from Marko Martivović : https://github.com/Marko-M/codeigniter-gettext
 
-Please use composer to install it and include it as a package in your CodeIgniter application. 
+Please use [Composer](https://getcomposer.org) to install it and include it as a package in your CodeIgniter application. 
 
 Instructions
 ------------
@@ -29,7 +29,7 @@ This is an example how to load Library overwriting default configuration:
 
 ```php
 <?php
-class My_controller extends CI_Controller
+class Your_controller extends CI_Controller
 {
    public function __construct()
    {
