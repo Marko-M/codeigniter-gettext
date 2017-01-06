@@ -1,6 +1,6 @@
 <?php
 // @codeCoverageIgnoreStart
-if ( ! defined('PHPUNIT_TESTING')) {
+if (!defined('PHPUNIT_TESTING')) {
     defined('BASEPATH') || exit('No direct script access allowed');
 }
 // @codeCoverageIgnoreEnd
@@ -10,7 +10,7 @@ if ( ! defined('PHPUNIT_TESTING')) {
  *
  * @package     CodeIgniter
  * @subpackage  Libraries
- * @category	Language
+ * @category    Language
  * @author      Joël Gaujard <joel@depiltech.com>
  * @author      Marko Martinović <marko@techytalk.info>
  * @link        https://github.com/joel-depiltech/codeigniter-gettext
@@ -25,6 +25,8 @@ class Gettext
      */
     public function __construct($config = array())
     {
+        log_message('info', 'Gettext Library Class Initialized');
+
         $CI = &get_instance();
 
         // Merge $config and config/gettext.php $config
@@ -55,9 +57,9 @@ class Gettext
         );
 
         log_message(
-            'info',
-            'Try to bind gettext catalog_codeset: ' . $config['gettext_catalog_codeset'] . " - " .
-                ($IsBindTextDomainCodeset ? 'Successful' : '*** FAILED ***')
+            (is_string($IsBindTextDomainCodeset) ? 'info' : 'error'),
+            'Gettext Library -> Try to bind textdomain_codeset: ' .
+            $config['gettext_catalog_codeset']
         );
 
         // Path to gettext locales directory relative to FCPATH.APPPATH
@@ -67,9 +69,9 @@ class Gettext
         );
 
         log_message(
-            'info',
-            'Try to bind gettext text domain (locale dir): ' . (empty($IsBindTextDomain) ? $IsBindTextDomain : APPPATH . $config['gettext_locale_dir']) . " - " .
-                (isset($IsBindTextDomain) ? 'Successful' : '*** FAILED ***')
+            (is_string($IsBindTextDomain) ? 'info' : 'error'),
+            'Gettext Library -> Try to bind text domain: ' .
+            APPPATH . $config['gettext_locale_dir']
         );
 
         // Gettext domain
@@ -78,9 +80,9 @@ class Gettext
         );
 
         log_message(
-            'info',
-            'Try to set gettext text_domain: ' . $config['gettext_text_domain'] . " - " .
-                ($IsSetTextDomain ? 'Successful' : '*** FAILED ***')
+            (is_string($IsSetTextDomain) ? 'info' : 'error'),
+            'Gettext Library -> Try to set text_domain: ' .
+            $config['gettext_text_domain']
         );
 
         // Gettext locale
@@ -90,18 +92,38 @@ class Gettext
         );
 
         log_message(
-            'info',
-            'Try to set gettext locale: ' . (is_array($config['gettext_locale']) ? print_r($config['gettext_locale'], TRUE) : $config['gettext_locale']) . " - " .
-                ($IsSetLocale ? 'Successful' : '*** FAILED ***')
+            (is_string($IsSetLocale) ? 'info' : 'error'),
+            'Gettext Library -> Try to set gettext locale: ' .
+            (is_array($config['gettext_locale']) ?
+                print_r($config['gettext_locale'], TRUE) :
+                $config['gettext_locale']
+            )
         );
-        
+
         // Change environment language for CLI
         $IsPutEnv = putenv('LANGUAGE=' . (is_array($config['gettext_locale']) ? $config['gettext_locale'][0] : $config['gettext_locale']));
-        
+
         log_message(
-            'info',
-            'Try to set Environment LANGUAGE: ' . (is_array($config['gettext_locale']) ? $config['gettext_locale'][0] : $config['gettext_locale']) . " - " .
-                ($IsPutEnv ? 'Successful' : '*** FAILED ***')
+            ($IsPutEnv === TRUE ? 'info' : 'error'),
+            'Gettext Library -> Try to set Environment LANGUAGE: ' .
+            (is_array($config['gettext_locale']) ?
+                $config['gettext_locale'][0] :
+                $config['gettext_locale']
+            )
+        );
+
+        // MO file exists for language
+        $file = APPPATH . $config['gettext_locale_dir'] .
+            '/' . $IsSetLocale .
+            '/LC_MESSAGES/' .
+            $config['gettext_text_domain'] . '.mo'
+        ;
+        $IsFileExists = is_file($file);
+
+        log_message(
+            ($IsFileExists === TRUE ? 'info' : 'error'),
+            'Gettext Library -> Try to check MO file exists: ' .
+            $file
         );
     }
 }
