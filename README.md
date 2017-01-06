@@ -7,11 +7,11 @@ CodeIgniter Gettext
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/joel-depiltech/codeigniter-gettext/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/joel-depiltech/codeigniter-gettext/?branch=master)
 [![License](https://poser.pugx.org/joel-depiltech/codeigniter-gettext/license)](https://packagist.org/packages/joel-depiltech/codeigniter-gettext)
 
-This is [CodeIgniter](https://codeigniter.com) PHP framework library for dealing with [Gettext](https://www.gnu.org/software/gettext/).
+This is [CodeIgniter](https://codeigniter.com) PHP framework package for dealing with [Gettext](https://www.gnu.org/software/gettext/).
 
-This library is a fork from Marko Martivović : https://github.com/Marko-M/codeigniter-gettext
+This package is a fork from Marko Martivović library : https://github.com/Marko-M/codeigniter-gettext
 
-Please use [Composer](https://getcomposer.org) to install it and include it as a package in your CodeIgniter application. 
+Please use [Composer](https://getcomposer.org) to install it and include it as a package in your CodeIgniter application.
 
 Instructions
 ------------
@@ -51,8 +51,15 @@ class Your_controller extends CI_Controller
 ?>
 ```
 
+Issues
+------
+
+If you have some issues with this package or is not working properly, please check your [CodeIgniter log](https://www.codeigniter.com/user_guide/general/errors.html#log_message) files. 'INFO' message is just for giving informations about the process, pay attention to 'ERROR' message which help you to resolve your issues.
+
+Submit a [new issue](https://github.com/joel-depiltech/codeigniter-gettext/issues/new) if you can't solve your problem and help us to enhance this package.
+
 Additional Usage
------------------------
+----------------
 
 If you want to use URIs in i18n Style, you can easily add a Post-Controller-Hook like the sample below.
 Place the following code inside your application/config/hooks.php.
