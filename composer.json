@@ -18,7 +18,7 @@
     "homepage": "https://github.com/joel-depiltech/codeigniter-gettext",
     "minimum-stability": "stable",
     "require": {
-        "php": ">=5.2"
+        "php": ">=5.6"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7"
