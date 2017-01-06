@@ -1,6 +1,8 @@
 <?php
 // @codeCoverageIgnoreStart
-if (!defined('PHPUNIT_TESTING')) defined('BASEPATH') OR exit('No direct script access allowed');
+if ( ! defined('PHPUNIT_TESTING')) {
+    defined('BASEPATH') || exit('No direct script access allowed');
+}
 // @codeCoverageIgnoreEnd
 
 /**

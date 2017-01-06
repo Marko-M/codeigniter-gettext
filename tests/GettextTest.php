@@ -16,7 +16,7 @@ class GettextTest extends PHPUnit_Framework_TestCase
         $state = ($successful ? 'Successful' : 'FAILED');
         $regex = '/(info|).*(' . $expression . ').*(' . $state . ')/';
 
-        return ( $regex );
+        return ($regex);
     }
 
     public function testCatalogCodeset()
@@ -60,7 +60,7 @@ class GettextTest extends PHPUnit_Framework_TestCase
             'gettext_locale' => $CI->config->item('gettext_locale')
         );
         */
-        require( realpath(dirname(__FILE__) . '/../') . '/src/config/gettext.php' );
+        require(realpath(dirname(__FILE__) . '/../') . '/src/config/gettext.php');
 
         Gettext::init($config);
     }
