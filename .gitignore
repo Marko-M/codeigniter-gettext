@@ -4,3 +4,6 @@
 # Composer
 /composer.lock
 /vendor/
+
+# PHPUnit
+/code-coverage/
