@@ -1,6 +1,9 @@
 Codeigniter gettext
 ===================
 
+[![Latest Stable Version](https://poser.pugx.org/joel-depiltech/codeigniter-gettext/v/stable.svg)](https://packagist.org/packages/joel-depiltech/codeigniter-gettext)
+[![License](https://poser.pugx.org/joel-depiltech/codeigniter-gettext/license)](https://packagist.org/packages/joel-depiltech/codeigniter-gettext)
+
 This is Codeigniter PHP framework library for dealing with gettext.
 
 This library is a fork from Marko Martivović : https://github.com/Marko-M/codeigniter-gettext
