@@ -48,7 +48,7 @@ class Gettext
      *
      * @param array $config configuration
      */
-    static public function init(array $config)
+    public static function init(array $config)
     {
         // Gettext catalog codeset
         $IsBindTextDomainCodeset = bind_textdomain_codeset(
