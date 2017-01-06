@@ -4,11 +4,15 @@
     "time": "2016-12-23",
     "type": "library",
     "license": "GPL-2.0",
-    "keywords": ["codeigniter", "gettext", "i18n"],
+    "keywords": ["codeigniter", "gettext", "i18n", "translation", "language"],
     "authors": [
         {
             "name": "Joël Gaujard",
             "email": "joel@depiltech.com"
+        },
+        {
+            "name": "Joël Gaujard",
+            "email": "j.gaujard@gmail.com"
         }
     ],
     "homepage": "https://github.com/joel-depiltech/codeigniter-gettext",
