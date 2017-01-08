@@ -1,5 +1,7 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+// @codeCoverageIgnoreStart
+defined('BASEPATH') || exit('No direct script access allowed');
+// @codeCoverageIgnoreEnd
 
 /**
  * CodeIgniter Gettext Helpers

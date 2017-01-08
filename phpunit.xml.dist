@@ -35,6 +35,7 @@
 
     <php>
         <const name="PHPUNIT_TESTING" value="TRUE"/>
+        <const name="BASEPATH" value="TRUE"/>
     </php>
 
 </phpunit>

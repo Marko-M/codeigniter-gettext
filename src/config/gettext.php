@@ -1,8 +1,6 @@
 <?php
 // @codeCoverageIgnoreStart
-if (!defined('PHPUNIT_TESTING')) {
-    defined('BASEPATH') || exit('No direct script access allowed');
-}
+defined('BASEPATH') || exit('No direct script access allowed');
 // @codeCoverageIgnoreEnd
 
 // Gettext catalog codeset
