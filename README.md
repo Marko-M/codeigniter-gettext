@@ -18,15 +18,25 @@ Instructions
 
 Please note that following steps assume that you have correctly installed gettext and configured Codeigniter on your server.
 
-1. Use composer to install this package `composer require joel-depiltech/codeigniter-gettext`
-2. Add this package to Auto-load Packages files array :
+1. Use composer to install this package
+`composer require joel-depiltech/codeigniter-gettext`
+2. Add this package to auto-load packages array
 `$autoload['packages'] = array(FCPATH . 'vendor/joel-depiltech/codeigniter-gettext/src');`
 or include it with Loader library
 `$this->load->add_package_path(FCPATH . 'vendor/joel-depiltech/codeigniter-gettext/src');`
-3. Adjust configuration when loading the library
-`$this->load->library('gettext', array('gettext_locale' => 'fr_FR', 'gettext_locale_dir' => 'language/locale'));`
-or just copy the file `application/vendor/joel-depiltech/codeigniter-gettext/src/config/gettext.php` in your folder `application/config/gettext.php`
-4. Create gettext locales directory according to your `gettext_locale_dir` (application/language/locales by default). Inside that directory create locale_name/LC_MESSAGES path for each of your locales and place your .mo files inside.
+3. Load default configuration file
+`$this->load->config('gettext');`
+or add it to auto-load config array
+`$autoload['config'] = array('gettext');`
+4. Load the library
+`$this->load->library('gettext');`
+or add it to auto-load library array
+`$autoload['library'] = array('gettext');`
+5. Load the helper
+`$this->load->helper('gettext');`
+or add it to auto-load helper array
+`$autoload['helper'] = array('gettext');`
+6. Create gettext locales directory according to your `gettext_locale_dir` (application/language/locales by default). Inside that directory create locale_name/LC_MESSAGES path for each of your locales and place your .mo files inside.
 
 This is an example how to load Library overwriting default configuration:
 
