@@ -25,15 +25,13 @@ class Gettext
     {
         log_message('info', 'Gettext Library Class Initialized');
 
-        $CI = &get_instance();
-
         // Merge $config and config/gettext.php $config
         $config = array_merge(
             array(
-                'gettext_locale_dir' => $CI->config->item('gettext_locale_dir'),
-                'gettext_text_domain' => $CI->config->item('gettext_text_domain'),
-                'gettext_catalog_codeset' => $CI->config->item('gettext_catalog_codeset'),
-                'gettext_locale' => $CI->config->item('gettext_locale')
+                'gettext_locale_dir' => config_item('gettext_locale_dir'),
+                'gettext_text_domain' => config_item('gettext_text_domain'),
+                'gettext_catalog_codeset' => config_item('gettext_catalog_codeset'),
+                'gettext_locale' => config_item('gettext_locale')
             ),
             $config
         );
