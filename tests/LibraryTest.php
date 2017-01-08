@@ -4,7 +4,7 @@ namespace CodeIgniterGetText\Tests;
 require_once('include/gettext_test_functions.php');
 require_once('include/gettext_test_constants.php');
 
-class GettextTest extends \PHPUnit_Framework_TestCase
+class LibraryTest extends \PHPUnit_Framework_TestCase
 {
 
     private function _regex($expression, $successful = TRUE)
