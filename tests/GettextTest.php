@@ -1,14 +1,10 @@
 <?php
+namespace CodeIgniterGetText\Tests;
 
-// Simulate constants defined in CodeIgniter
-define('APPPATH', dirname(__FILE__));
+require_once('include/gettext_test_functions.php');
+require_once('include/gettext_test_constants.php');
 
-// Simulate helper
-function log_message($level, $message) {
-    echo "\n\r" . $level . '|' . $message;
-}
-
-class GettextTest extends PHPUnit_Framework_TestCase
+class GettextTest extends \PHPUnit_Framework_TestCase
 {
 
     private function _regex($expression, $successful = TRUE)
@@ -70,7 +66,7 @@ class GettextTest extends PHPUnit_Framework_TestCase
         // Load default config array
         require(realpath(dirname(__FILE__) . '/../') . '/src/config/gettext.php');
 
-        Gettext::init($config);
+        \Gettext::init($config);
     }
 
 }
