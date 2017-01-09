@@ -28,6 +28,10 @@
         "classmap": ["src/"],
         "psr-4": {
             "CodeIgniterGetText\\Tests\\": "tests/"
-        }
+        },
+        "files": [
+            "tests/include/gettext_test_functions.php",
+            "tests/include/gettext_test_constants.php"
+        ]
     }
 }

@@ -42,6 +42,6 @@ if (!function_exists('_n')) {
      */
     function _n($expression_singular, $expression_plural, $number)
     {
-        return (ngettext($expression_singular, $expression_plural, (int)$number));
+        return (ngettext($expression_singular, $expression_plural, (int) $number));
     }
 }

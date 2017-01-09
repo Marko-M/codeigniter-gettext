@@ -1,9 +1,6 @@
 <?php
 namespace CodeIgniterGetText\Tests;
 
-require_once('include/gettext_test_functions.php');
-require_once('include/gettext_test_constants.php');
-
 class LibraryTest extends \PHPUnit_Framework_TestCase
 {
 
@@ -54,14 +51,6 @@ class LibraryTest extends \PHPUnit_Framework_TestCase
     private function _library()
     {
         $config = array();
-        /*
-        $config = array(
-            'gettext_locale_dir' => $CI->config->item('gettext_locale_dir'),
-            'gettext_text_domain' => $CI->config->item('gettext_text_domain'),
-            'gettext_catalog_codeset' => $CI->config->item('gettext_catalog_codeset'),
-            'gettext_locale' => $CI->config->item('gettext_locale')
-        );
-        */
 
         // Load default config array
         require(realpath(dirname(__FILE__) . '/../') . '/src/config/gettext.php');
