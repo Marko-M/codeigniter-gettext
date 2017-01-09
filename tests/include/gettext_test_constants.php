@@ -2,5 +2,5 @@
 
 // Simulate constants defined in CodeIgniter
 if (!defined('APPPATH')) {
-	define('APPPATH', realpath(dirname(__FILE__) . '/../') . '/');
+    define('APPPATH', realpath(dirname(__FILE__) . '/../') . '/');
 }
