@@ -1,4 +1,6 @@
 <?php
 
 // Simulate constants defined in CodeIgniter
-define('APPPATH', realpath(dirname(__FILE__) . '/../') . '/');
+if (!defined('APPPATH')) {
+    define('APPPATH', realpath(dirname(__FILE__) . '/../') . '/');
+}
