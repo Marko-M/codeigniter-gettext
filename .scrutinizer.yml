@@ -19,5 +19,13 @@ build:
             -
                 command: './vendor/bin/phpunit --coverage-clover=coverage.xml'
                 coverage:
-                    file: 'coverage.xmll'
+                    file: 'coverage.xml'
                     format: 'clover'
+    nodes:
+        tests: true
+        analysis:
+            tests:
+                override:
+                    -
+                        command: phpcs-run
+                        use_website_config: true
