@@ -7,7 +7,7 @@ class LibraryTest extends \PHPUnit_Framework_TestCase
     private function _regex($expression, $successful = TRUE)
     {
         $log = ($successful ? 'info' : 'debug');
-        $regex = '/(' . $log . '|).*(' . $expression . ')/';
+        $regex = '/(' . $log . '|).*(' . $expression . ')/i';
 
         return ($regex);
     }
