@@ -1,6 +1,13 @@
+# OS Files
+.DS_Store
+.AppleDouble
+
+# PhpStorm
+.idea
+
 # Composer
 /composer.lock
 /vendor/
 
-# OS files
-.AppleDouble
+# PHPUnit
+/code-coverage/

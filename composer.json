@@ -4,19 +4,37 @@
     "time": "2016-12-23",
     "type": "library",
     "license": "GPL-2.0",
-    "keywords": ["codeigniter", "gettext", "i18n"],
+    "keywords": ["codeigniter", "gettext", "i18n", "translation", "language"],
     "authors": [
         {
             "name": "Joël Gaujard",
             "email": "joel@depiltech.com"
+        },
+        {
+            "name": "Joël Gaujard",
+            "email": "j.gaujard@gmail.com"
         }
     ],
     "homepage": "https://github.com/joel-depiltech/codeigniter-gettext",
     "minimum-stability": "stable",
+    "prefer-stable": true,
     "require": {
-        "php": ">=5.2"
+        "php": ">=5.6",
+        "ext-gettext": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CodeIgniterGetText\\Tests\\": "tests/"
+        },
+        "files": [
+            "tests/include/gettext_test_functions.php",
+            "tests/include/gettext_test_constants.php"
+        ]
     }
 }
