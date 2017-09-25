@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="CodeIgniter GetText" default="UnitTestReport">
+	<autoloader autoloaderpath="vendor/autoload.php"/>
+
+	<target name="UnitTestReport">
+
+		<echo msg="START Report generation" />
+
+		<phpunitreport
+			infile="report/junit.xml"
+			format="noframes"
+			todir="report/"
+			styledir="vendor/phing/phing/etc/"
+		/>
+
+		<echo msg="FINISH Report generation" />
+
+	</target>
+
+</project>
