@@ -31,6 +31,7 @@
         />
         <log type="coverage-clover" target="./code-coverage/coverage.xml"/>
         <log type="coverage-text" target="php://stdout" showUncoveredFiles="false" showOnlySummary="true" />
+        <log type="junit" target="report/junit.xml" logIncompleteSkipped="true" />
     </logging>
 
     <php>

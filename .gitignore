@@ -9,5 +9,6 @@
 /composer.lock
 /vendor/
 
-# PHPUnit
+# PHPUnit & Phing
 /code-coverage/
+/report/
