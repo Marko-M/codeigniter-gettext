@@ -37,5 +37,11 @@
             "tests/include/gettext_test_functions.php",
             "tests/include/gettext_test_constants.php"
         ]
+    },
+    "scripts": {
+        "test": [
+            "phpunit",
+            "phing"
+        ]
     }
 }
