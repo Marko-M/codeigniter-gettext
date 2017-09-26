@@ -1,0 +1,30 @@
+# .scrutinizer.yml
+checks:
+    php: true
+
+filter:
+    paths: [ "src/*" ]
+    excluded_paths:
+        - "tests/*"
+        - "*/vendor/*"
+
+build:
+    environment:
+        timezone: UTC
+        php:
+            version: 5.6
+    nodes:
+        tests: true
+        analysis:
+            tests:
+                override:
+                    -
+                        command: phpcs-run
+                        use_website_config: true
+    tests:
+        override:
+            -
+                command: 'composer test'
+                coverage:
+                    file: 'code-coverage/coverage.xml'
+                    format: 'clover'
